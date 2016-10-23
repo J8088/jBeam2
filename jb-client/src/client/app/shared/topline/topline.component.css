@@ -1,0 +1,51 @@
+.topline {
+    border-bottom: 1px solid #eaeaea;
+}
+.topline a {
+    text-decoration: none;
+}
+.topline__in {
+    width: 960px;
+    margin: 0 auto;
+    height: 35px;
+    line-height: 35px;
+    font-size: 11px;
+}
+.topline__visitor {
+    margin-left: 10px;
+    display: inline-block;
+}
+.topline__greeting {
+    display: inline-block;
+    color: #898989;
+}
+.topline__login {
+    display: inline-block;
+    color: #f16325;
+}
+.topline__create-account {
+    display: inline-block;
+    color: #f16325;
+}
+.topline__menu {
+    float: right;
+    margin-right: 10px;
+    display: inline-block;
+    color: #777777;
+}
+.topline__account {
+    display: inline-block;
+    color: #777777;
+}
+.topline__wishlist {
+    display: inline-block;
+    color: #777777;
+}
+.topline__shoping-cart {
+    display: inline-block;
+    color: #777777;
+}
+.topline__checkout {
+    display: inline-block;
+    color: #777777;
+}

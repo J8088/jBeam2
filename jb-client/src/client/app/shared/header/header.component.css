@@ -1,0 +1,50 @@
+.header {
+    height: 137px;
+}
+.header__in {
+    width: 960px;
+    margin: 0 auto;
+    height: inherit;
+    /*background-image: url('../img/map-bg.png');*/
+    background-repeat: no-repeat;
+    background-position: 71px 0;
+}
+.header__in:before,
+.header__in:after {
+    content: " ";
+    display: table;
+}
+.header__in:after {
+    clear: both;
+}
+.header__logo {
+    float: left;
+    margin-top: 34px;
+}
+.header__logo-top {
+    font-size: 30px;
+}
+.header__logo-bottom {
+    color: #999999;
+}
+.header__logo_orange {
+    color: #f16325;
+}
+.header__choice {
+    float: right;
+    margin-top: 30px;
+}
+.header__currency {
+    display: inline-block;
+    margin-right: 10px;
+}
+.header__lang {
+    display: inline-block;
+    margin-right: 10px;
+}
+.header__cart {
+    display: inline-block;
+}
+.header__search {
+    display: inline-block;
+}
