@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { ToolbarComponent } from './toolbar/index';
 import { NavbarComponent } from './navbar/index';
+import { NavComponent } from './nav/index';
 import { NameListService } from './name-list/index';
 import { ToplineComponent } from './topline/index';
 import { HeaderComponent } from './header/index';
@@ -15,9 +16,10 @@ import { HeaderComponent } from './header/index';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
-  declarations: [ToolbarComponent, NavbarComponent, ToplineComponent, HeaderComponent],
+  declarations: [ToolbarComponent, NavbarComponent, ToplineComponent, HeaderComponent,
+    NavComponent],
   exports: [ToolbarComponent, NavbarComponent, ToplineComponent, HeaderComponent,
-    CommonModule, FormsModule, RouterModule]
+    CommonModule, FormsModule, RouterModule, NavComponent]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {
