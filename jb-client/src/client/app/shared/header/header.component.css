@@ -249,7 +249,7 @@
     width: 960px;
     margin: 0 auto;
     height: inherit;
-    /*background-image: url('../img/map-bg.png');*/
+    background-image: url('./assets/img/map-bg.png');
     background-repeat: no-repeat;
     background-position: 71px 0;
 }
