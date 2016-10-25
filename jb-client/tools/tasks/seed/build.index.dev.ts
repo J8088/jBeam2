@@ -13,7 +13,7 @@ const plugins = <any>gulpLoadPlugins();
  * Executes the build process, injecting the shims and libs into the `index.hml` for the development environment.
  */
 export = () => {
-  return gulp.src(join(Config.APP_SRC, 'index.html'))
+    return gulp.src(join(Config.APP_SRC, 'index.html'))
     .pipe(inject('shims'))
     .pipe(inject('libs'))
     .pipe(inject())
@@ -26,10 +26,11 @@ export = () => {
  * @param {string} name - The file to be injected.
  */
 function inject(name?: string) {
-  return plugins.inject(gulp.src(getInjectablesDependenciesRef(name), { read: false }), {
-    name,
-    transform: transformPath()
-  });
+    console.log('$..................getInjectablesDependenciesRef(name):', getInjectablesDependenciesRef(name));
+    return plugins.inject(gulp.src(getInjectablesDependenciesRef(name), {read: false}), {
+        name,
+        transform: transformPath()
+    });
 }
 
 /**
@@ -37,7 +38,8 @@ function inject(name?: string) {
  * @param {string} name - The dependency to be mapped.
  */
 function getInjectablesDependenciesRef(name?: string) {
-  return Config.DEPENDENCIES
+    console.log('$..................getInjectablesDependenciesRef Config.DEPENDENCIES:', Config.DEPENDENCIES);
+    return Config.DEPENDENCIES
     .filter(dep => dep['inject'] && dep['inject'] === (name || true))
     .map(mapPath);
 }
@@ -47,13 +49,14 @@ function getInjectablesDependenciesRef(name?: string) {
  * @param {any} dep - The dependency to be mapped.
  */
 function mapPath(dep: any) {
-  let envPath = dep.src;
-  if (envPath.startsWith(Config.APP_SRC) && !envPath.endsWith('.scss')) {
-    envPath = join(Config.APP_DEST, envPath.replace(Config.APP_SRC, ''));
-  } else if (envPath.startsWith(Config.APP_SRC) && envPath.endsWith('.scss')) {
-    envPath = envPath.replace(Config.ASSETS_SRC, Config.CSS_DEST).replace('.scss', '.css');
-  }
-  return envPath;
+    let envPath = dep.src;
+    if (envPath.startsWith(Config.APP_SRC) && !envPath.endsWith('.scss')) {
+        envPath = join(Config.APP_DEST, envPath.replace(Config.APP_SRC, ''));
+    } else if (envPath.startsWith(Config.APP_SRC) && envPath.endsWith('.scss')) {
+        envPath = envPath.replace(Config.ASSETS_SRC, Config.CSS_DEST).replace('.scss', '.css');
+    }
+    console.log('$..................envPath:', envPath);
+    return envPath;
 }
 
 /**
@@ -61,11 +64,14 @@ function mapPath(dep: any) {
  * environment.
  */
 function transformPath() {
-  return function (filepath: string) {
-    if (filepath.startsWith(`/${Config.APP_DEST}`)) {
-      filepath = filepath.replace(`/${Config.APP_DEST}`, '');
-    }
-    arguments[0] = join(Config.APP_BASE, filepath) + `?${Date.now()}`;
-    return slash(plugins.inject.transform.apply(plugins.inject.transform, arguments));
-  };
+    return function (filepath: string) {
+        console.log('$..................filepath:', filepath);
+        if (filepath.startsWith(`/${Config.APP_DEST}`)) {
+            filepath = filepath.replace(`/${Config.APP_DEST}`, '');
+        }
+        arguments[0] = join(Config.APP_BASE, filepath) + `?${Date.now()}`;
+        let result = slash(plugins.inject.transform.apply(plugins.inject.transform, arguments));
+        console.log('$..................result:', result);
+        return result;
+    };
 }
