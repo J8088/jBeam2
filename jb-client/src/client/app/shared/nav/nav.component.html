@@ -5,7 +5,11 @@
             <li class="nav__item">
                 <a href="javascript:void(0)"></a>
             </li>
-            <li class="nav__item"><a href="javascript:void(0)">WOMEN</a></li>
+            <li class="nav__item">
+                <a [routerLink]="['/about']"
+                   [routerLinkActive]="['router-link-active']"
+                   [routerLinkActiveOptions]="{exact:true}">WOMEN</a>
+            </li>
             <li class="nav__item"><a href="javascript:void(0)">MEN</a></li>
             <li class="nav__item"><a href="javascript:void(0)">CHILDREN</a></li>
             <li class="nav__item"><a href="javascript:void(0)">FOOTWEAR</a></li>

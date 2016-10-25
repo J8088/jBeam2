@@ -24,6 +24,10 @@ export class ProjectConfig extends SeedConfig {
       // {src: 'lodash/lodash.min.js', inject: 'libs'},
     ];
 
+    this.NPM_ASSETS = [
+      ...this.NPM_ASSETS,
+    ];
+
     // Add `local` third-party libraries to be injected/bundled.
     this.APP_ASSETS = [
       ...this.APP_ASSETS,
