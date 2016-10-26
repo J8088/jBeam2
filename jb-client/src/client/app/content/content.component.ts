@@ -11,4 +11,21 @@ import { ContentService } from '../shared/index';
 
 export class ContentComponent implements OnInit {
 
+    errorMessage: string;
+    items: any[] = [];
+
+    constructor(public contentService: ContentService) {
+    }
+
+    ngOnInit() {
+        this.getItems();
+    }
+
+    getItems() {
+        this.contentService.get()
+        .subscribe(
+            items => this.items = items,
+            error => this.errorMessage = <any>error
+        );
+    }
 }
