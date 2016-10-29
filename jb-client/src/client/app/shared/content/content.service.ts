@@ -4,15 +4,36 @@ import { Observable } from 'rxjs/Observable';
 
 import 'rxjs/add/observable/throw';
 
+export class Product {
+    constructor(
+        public id: number,
+        public title: string,
+        public thumbnail: Object,
+        public price: number,
+        public currency: string,
+        public description: string,
+        public rating: number
+    ) {}
+}
+
 @Injectable()
 export class ContentService {
+
     constructor(private http: Http) {
     }
 
-    get(): Observable<string[]> {
-        return this.http.get('/content')
-        .map((res: Response) => res.json())
-        .do(data => console.log('$..................data:', data))
+    get(): Observable<Product[]> {
+        return this.http.get('/assets/content.json')
+        .map((res: Response) => {
+            let data: Product[] = [];
+
+            for(let o of res.json()){
+                data.push(new Product(o.id, o.title, o.thumbnail, o.price, o.currency, o.description, o.rating));
+            }
+
+            return data;})
+        // .map((res: Response) => res.json())
+        // .do(data => console.log('$..................data:', data))
         .catch(this.handleError);
     }
 

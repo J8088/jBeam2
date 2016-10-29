@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentService } from '../shared/index';
+import { ContentService, Product } from '../shared/index';
 
 
 @Component({
@@ -12,19 +12,20 @@ import { ContentService } from '../shared/index';
 export class ContentComponent implements OnInit {
 
     errorMessage: string;
-    items: any[] = [];
+    items: Product[] = [];
 
     constructor(public contentService: ContentService) {
     }
 
     ngOnInit() {
+        console.log('$..................!!! on init:');
         this.getItems();
     }
 
     getItems() {
         this.contentService.get()
         .subscribe(
-            items => this.items = items,
+            items => { this.items = items; },
             error => this.errorMessage = <any>error
         );
     }

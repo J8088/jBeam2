@@ -1,10 +1,49 @@
-<p>Howdy! Here's a list of awesome computer scientists. Do you know any others? Add to the list yourself.</p>
+<!--<p>Howdy! Here's a list of awesome computer scientists. Do you know any others? Add to the list yourself.</p>-->
 
-<form (submit)="addName()">
-  <input [(ngModel)]="newName" name="newName" placeholder="Awesome Computer Scientist">
-  <button type="submit">Add</button>
-</form>
+<!--<form (submit)="addName()">-->
+  <!--<input [(ngModel)]="newName" name="newName" placeholder="Awesome Computer Scientist">-->
+  <!--<button type="submit">Add</button>-->
+<!--</form>-->
 
-<ul>
-  <li *ngFor="let name of names">{{name}}</li>
-</ul>
+<!--<ul>-->
+  <!--<li *ngFor="let name of names">{{name}}</li>-->
+<!--</ul>-->
+
+<div class="l">
+  <div class="l-col1">
+    <div class="categories">
+      <div class="categories__header">
+        <i>CATEGORIES</i>
+        <div class="splitter"><img src="img/dotted-line-category.png" alt=""></div>
+      </div>
+      <div class="categories__nav">
+        <ul class="categories__nav-list">
+          <li class="categories__nav-outer-item_active">
+            <div class="categories__nav-header">
+              <a class="categories__link categories__link_active" href="">Women(16)</a>
+            </div>
+            <ul class="categories__nav-inner-list">
+              <li class="categories__nav-inner-item"><a class="categories__link categories__link-inner" href="javascript:void(0)">Beauty(3)</a></li>
+              <li class="categories__nav-inner-item"><a class="categories__link categories__link-inner" href="javascript:void(0)">Dresses(4)</a></li>
+              <li class="categories__nav-inner-item"><a class="categories__link categories__link-inner" href="javascript:void(0)">Shorts(6)</a></li>
+              <li class="categories__nav-inner-item"><a class="categories__link categories__link-inner" href="javascript:void(0)">Shoes(2)</a></li>
+              <li class="categories__nav-inner-item"><a class="categories__link categories__link-inner" href="javascript:void(0)">Tops(1)</a></li>
+              <li class="categories__nav-inner-item"><a class="categories__link categories__link-inner" href="javascript:void(0)">Jakets&Coats(7)</a></li>
+            </ul>
+          </li>
+          <li class="categories__nav-outer-item"><a class="categories__link categories__link-header" href="">Men(12)</a></li>
+          <li class="categories__nav-outer-item"><a class="categories__link categories__link-header" href="">Children(9)</a></li>
+          <li class="categories__nav-outer-item"><a class="categories__link categories__link-header" href="">FootWear(3)</a></li>
+          <li class="categories__nav-outer-item"><a class="categories__link categories__link-header" href="">Accesspries(56)</a></li>
+          <li class="categories__nav-outer-item"><a class="categories__link categories__link-header" href="">Outlet(12)</a></li>
+          <li class="categories__nav-outer-item"><a class="categories__link categories__link-header" href="">Community(0)</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="l-col2">
+    <jb-content></jb-content>
+  </div>
+</div>
+
+
