@@ -6,12 +6,14 @@ import { ContentComponent } from '../content/content.component';
 import { ContentEntryComponent } from '../content-entry/content-entry.component';
 import { NameListService } from '../shared/name-list/index';
 import { ContentService } from '../shared/content/index';
+import { SideMenuService } from '../shared/side-menu/index';
+import { SideMenuComponent } from '../side-menu/side-menu.component';
 
 
 @NgModule({
   imports: [CommonModule, SharedModule],
-  declarations: [HomeComponent, ContentComponent, ContentEntryComponent],
-  exports: [HomeComponent, ContentComponent, ContentEntryComponent],
-  providers: [NameListService, ContentService]
+  declarations: [HomeComponent, ContentComponent, ContentEntryComponent, SideMenuComponent],
+  exports: [HomeComponent, ContentComponent, ContentEntryComponent, SideMenuComponent],
+  providers: [NameListService, ContentService, SideMenuService]
 })
 export class HomeModule { }

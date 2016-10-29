@@ -1,0 +1,58 @@
+[
+  {
+    "category_id": 1,
+    "category_code": "apple",
+    "category_name": "Apple",
+    "category_desc": "Apple",
+    "active": 1
+  },
+  {
+    "category_id": 2,
+    "category_code": "lg",
+    "category_name": "LG",
+    "category_desc": "LG",
+    "active": 1
+  },
+  {
+    "category_id": 3,
+    "category_code": "lenovo",
+    "category_name": "Lenovo",
+    "category_desc": "Lenovo",
+    "active": 1
+  },
+  {
+    "category_id": 4,
+    "category_code": "samsung",
+    "category_name": "Samsung",
+    "category_desc": "Samsung",
+    "active": 1
+  },
+  {
+    "category_id": 5,
+    "category_code": "htc",
+    "category_name": "HTC",
+    "category_desc": "HTC",
+    "active": 1
+  },
+  {
+    "category_id": 6,
+    "category_code": "sony",
+    "category_name": "Sony",
+    "category_desc": "Sony",
+    "active": 1
+  },
+  {
+    "category_id": 7,
+    "category_code": "huawei",
+    "category_name": "HUAWEI",
+    "category_desc": "HUAWEI",
+    "active": 1
+  },
+  {
+    "category_id": 8,
+    "category_code": "xiaomi",
+    "category_name": "Xiaomi",
+    "category_desc": "Xiaomi",
+    "active": 1
+  }
+]

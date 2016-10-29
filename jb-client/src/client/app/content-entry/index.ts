@@ -1,1 +1,1 @@
-export * from 'content-entry.component';
+export * from './content-entry.component';

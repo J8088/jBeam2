@@ -6,7 +6,8 @@
     "price": 150.00,
     "currency": "USD",
     "description": "Foliomania the designer portfolio brochure",
-    "rating": 5
+    "rating": 5,
+    "categories": ["apple", "lg"]
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "price": 150.00,
     "currency": "USD",
     "description": "Foliomania the designer portfolio brochure",
-    "rating": 5
+    "rating": 5,
+    "categories": ["lenovo", "lg", "htc"]
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "price": 150.00,
     "currency": "USD",
     "description": "Foliomania the designer portfolio brochure",
-    "rating": 5
+    "rating": 5,
+    "categories": ["lenovo", "htc"]
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "price": 150.00,
     "currency": "USD",
     "description": "Foliomania the designer portfolio brochure",
-    "rating": 5
+    "rating": 5,
+    "categories": ["apple"]
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "price": 150.00,
     "currency": "USD",
     "description": "Foliomania the designer portfolio brochure",
-    "rating": 5
+    "rating": 5,
+    "categories": ["apple"]
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "price": 150.00,
     "currency": "USD",
     "description": "Foliomania the designer portfolio brochure",
-    "rating": 5
+    "rating": 5,
+    "categories": ["lg"]
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "price": 150.00,
     "currency": "USD",
     "description": "Foliomania the designer portfolio brochure",
-    "rating": 5
+    "rating": 5,
+    "categories": ["lg"]
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "price": 150.00,
     "currency": "USD",
     "description": "Foliomania the designer portfolio brochure",
-    "rating": 5
+    "rating": 5,
+    "categories": ["lg"]
   },
   {
     "id": 9,
@@ -78,6 +86,7 @@
     "price": 150.00,
     "currency": "USD",
     "description": "Foliomania the designer portfolio brochure",
-    "rating": 5
+    "rating": 5,
+    "categories": ["apple", "sony"]
   }
 ]
